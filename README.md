@@ -16,15 +16,26 @@ Correr el servidor de desarrollo <img src="https://img.icons8.com/?size=100&id=1
 
 <hr>
 
-<br>
+<p>
 Entrar a la carpeta backend <img src="https://img.icons8.com/?size=100&id=zRCxfHhAkOiL&format=png&color=000000" width="24px">
-<br>
+</p>
+
+<p>
 <img src="https://img.icons8.com/?size=100&id=zQ1yf8Peqsvz&format=png&color=000000" width="10px"> cd backend
-<br>
+</p>
+
+<p>
 Instalar las dependencias del backend <img src="https://img.icons8.com/?size=100&id=IxuhLHjdG8Jf&format=png&color=000000" width="24px">
-<br>
+</p>
+
+<p>
 <img src="https://img.icons8.com/?size=100&id=zQ1yf8Peqsvz&format=png&color=000000" width="10px"> npm install
-<br>
+</p>
+
+<p>
 Correr el servidor de desarrollo <img src="https://img.icons8.com/?size=100&id=108805&format=png&color=000000" width="32px">
-<br>
+</p>
+
+<p>
 <img src="https://img.icons8.com/?size=100&id=zQ1yf8Peqsvz&format=png&color=000000" width="10px"> npm run dev
+</p>

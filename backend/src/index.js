@@ -1,56 +1,60 @@
-import express from 'express'
-import cors from 'cors'
-import yaml from 'js-yaml';
+import express from "express";
+import cors from "cors";
+import yaml from "js-yaml";
 
-const app = express()
+const app = express();
 
-app.use(cors())
-app.use(express.json())
+app.use(cors());
+app.use(express.json());
 
 app.get("/json", (req, res) => {
+  try {
     let Kenia = {
-        nombre: "kenia stepede",
-        edad: 20,
-        telefono: 6275207144
-    }
-    res.json(Kenia)
-})
+      nombre: "juan",
+      edad: 20,
+      telefono: 6271437428,
+    };
+    res.json(Kenia);
+  } catch (error) {
+    res.send(error);
+  }
+});
 
 app.get("/xml", (req, res) => {
+  try {
     const xmlData = `
     <root>
         <item>
-            <nombre>Producto 1</nombre>
-            <precio>10.00</precio>
-        </item>
-        <item>
-            <nombre>Producto 2</nombre>
-            <precio>20.00</precio>
+            <nombre>juan</nombre>
+            <edad>20</edad>
+            <telefono>6271437428</telefono>
         </item>
     </root>
 `;
-    res.set('Content-Type', 'application/xml');
+    res.set("Content-Type", "application/xml");
     res.send(xmlData);
-
-})
+  } catch (error) {
+    res.send(error);
+  }
+});
 
 app.get("/yaml", (req, res) => {
+  try {
     const datos = {
-        producto1: {
-            nombre: 'Producto 1',
-            precio: 10.00
-        },
-        producto2: {
-            nombre: 'Producto 2',
-            precio: 20.00
-        }
+      producto1: {
+        nombre: "Producto 1",
+        edad: 20,
+        telefono: 6271437428,
+      },
     };
     const datosYAML = yaml.dump(datos);
 
     // Configura la respuesta HTTP con el contenido YAML
-    res.set('Content-Type', 'text/yaml');
+    res.set("Content-Type", "text/yaml");
     res.send(datosYAML);
+  } catch (error) {
+    res.send(error);
+  }
+});
 
-})
-
-app.listen(4000, () => console.log("Servidor corriendo en el puerto 4000"))
+app.listen(4000, () => console.log("Servidor corriendo en el puerto 4000"));
